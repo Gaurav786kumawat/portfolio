@@ -5,9 +5,18 @@ import Footer from "./components/Footer";
 import AnimatedLayout from "./components/AnimatedLayout";
 
 export const metadata = {
-  title: "Gaurav — Portfolio",
-  description: "Frontend dev • Student • Projects",
+  title: 'Gaurav Kumawat | Portfolio',
+  description: 'Gaurav Kumawat — Frontend Developer. Projects, skills, experience, and contact.',
+  icons: {
+    icon: '/favicon.ico',
+  },
+  openGraph: {
+    title: 'Gaurav Kumawat | Portfolio',
+    description: 'Frontend Developer — projects, skills, and contact.',
+    images: '/images/og-image.png'
+  }
 };
+
 
 export default function RootLayout({ children }) {
   return (

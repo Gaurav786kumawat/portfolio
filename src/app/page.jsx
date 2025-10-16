@@ -4,6 +4,7 @@ import PageWrapper from "./components/PageWrapper";
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt, FaLinkedin, FaReact, FaNodeJs, FaDatabase } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiMongodb, SiLeetcode } from "react-icons/si";
+import Image from "next/image";
 
 export default function Home() {
   const featuredProjects = [
@@ -107,15 +108,21 @@ export default function Home() {
               transition={{ duration: 0.9 }}
               className="relative flex items-center justify-center"
             >
+              {/* Glowing gradient background */}
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-tr from-purple-500/20 via-pink-400/10 to-rose-400/15 blur-3xl"></div>
 
+              {/* Main profile card */}
               <div className="relative rounded-3xl overflow-hidden border border-white/10 dark:border-slate-700 shadow-2xl">
-                <img
+                <Image
                   src="/images/profile.png"
                   alt="Gaurav Kumawat"
-                  className="w-80 h-80 object-cover md:w-96 md:h-96 rounded-3xl"
+                  width={384} // w-96
+                  height={384} // h-96
+                  className="w-80 h-80 md:w-96 md:h-96 object-cover rounded-3xl"
+                  priority
                 />
-                {/* small floating card with quick stat */}
+
+                {/* Small floating stat card */}
                 <div className="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/85 px-4 py-2 rounded-2xl shadow-md border border-slate-200/40 dark:border-slate-700/40 flex items-center gap-3">
                   <SiLeetcode className="w-5 h-5 text-rose-600" />
                   <div>
@@ -227,11 +234,15 @@ export default function Home() {
 
           {/* 4. FEATURED PROJECTS */}
           <section id="projects" className="space-y-6">
+            {/* Section header */}
             <div className="flex items-center justify-between">
               <h2 className="text-3xl font-bold">Featured Projects</h2>
-              <Link href="/projects" className="text-sm text-rose-600 font-medium hover:underline">View all projects →</Link>
+              <Link href="/projects" className="text-sm text-rose-600 font-medium hover:underline">
+                View all projects →
+              </Link>
             </div>
 
+            {/* Project cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {featuredProjects.map((p, idx) => (
                 <motion.article
@@ -240,25 +251,49 @@ export default function Home() {
                   transition={{ type: "spring", stiffness: 200 }}
                   className="rounded-2xl overflow-hidden border border-slate-200/40 dark:border-slate-700/40 bg-white/60 dark:bg-slate-900/40 shadow-lg"
                 >
-                  <div className="h-44 md:h-48 overflow-hidden">
-                    <img src={p.image} alt={p.title} className="w-full h-full object-cover" />
+                  {/* Project image */}
+                  <div className="h-44 md:h-48 overflow-hidden relative">
+                    <Image
+                      src={p.image.startsWith("/") ? p.image : `/${p.image}`} // ensure valid path
+                      alt={p.title}
+                      fill
+                      className="object-cover w-full h-full"
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      priority={idx === 0} // preload first image
+                    />
                   </div>
 
+                  {/* Project content */}
                   <div className="p-5">
                     <h3 className="text-xl font-semibold text-rose-600">{p.title}</h3>
                     <p className="text-sm text-slate-600 dark:text-slate-300 mt-2">{p.desc}</p>
 
                     <div className="flex flex-wrap gap-2 mt-4">
                       {p.tech.map((t, i) => (
-                        <span key={i} className="text-xs px-2 py-1 rounded-full bg-rose-100 text-rose-700">{t}</span>
+                        <span
+                          key={i}
+                          className="text-xs px-2 py-1 rounded-full bg-rose-100 text-rose-700"
+                        >
+                          {t}
+                        </span>
                       ))}
                     </div>
 
                     <div className="flex items-center gap-3 mt-4">
-                      <a href={p.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm px-3 py-2 rounded-md border hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+                      <a
+                        href={p.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm px-3 py-2 rounded-md border hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+                      >
                         <FaGithub /> <span>GitHub</span>
                       </a>
-                      <a href={p.live} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm px-3 py-2 rounded-md bg-rose-600 text-white hover:opacity-95 transition">
+                      <a
+                        href={p.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm px-3 py-2 rounded-md bg-rose-600 text-white hover:opacity-95 transition"
+                      >
                         <FaExternalLinkAlt /> <span>Live Demo</span>
                       </a>
                     </div>
@@ -269,11 +304,16 @@ export default function Home() {
 
             {/* View More Projects Button */}
             <div className="flex justify-center">
-              <Link href="/projects" className="px-6 py-3 rounded-lg bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold hover:shadow-lg transition transform hover:scale-[1.02]">
+              <Link
+                href="/projects"
+                className="px-6 py-3 rounded-lg bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold hover:shadow-lg transition transform hover:scale-[1.02]"
+              >
                 View More Projects
               </Link>
             </div>
           </section>
+
+
 
           {/* 5. DSA / Problem-Solving Showcase */}
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">

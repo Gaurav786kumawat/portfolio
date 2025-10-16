@@ -1,12 +1,14 @@
 'use client';
+
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ProjectsPage() {
     const projects = [
         {
             title: "Portfolio Website",
-            image: "./images/projects/portfolio.jpeg",
+            image: "/images/projects/portfolio.jpeg",
             description:
                 "A personal portfolio built with Next.js, Tailwind CSS, and Framer Motion — showcasing projects, skills, and interactive animations.",
             tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
@@ -15,7 +17,7 @@ export default function ProjectsPage() {
         },
         {
             title: "DevBlog Platform",
-            image: "./images/projects/devBlog2.jpeg",
+            image: "/images/projects/devBlog2.jpeg",
             description:
                 "A Markdown-based developer blogging platform with authentication, CMS-like UI, and SEO-optimized pages.",
             tech: ["Next.js", "MongoDB", "NextAuth", "Tailwind"],
@@ -24,7 +26,7 @@ export default function ProjectsPage() {
         },
         {
             title: "ChatGPT Clone",
-            image: "./images/projects/3Ai.jpeg",
+            image: "/images/projects/3Ai.jpeg",
             description:
                 "An AI-powered chatbot web app that integrates OpenAI API with conversational memory and dynamic prompts.",
             tech: ["React", "Node.js", "OpenAI API", "Express"],
@@ -33,7 +35,7 @@ export default function ProjectsPage() {
         },
         {
             title: "Taskify — Task Manager",
-            image: "./images/projects/taskmanager4.avif",
+            image: "/images/projects/taskmanager4.avif",
             description:
                 "A sleek productivity app to manage tasks, projects, and goals with real-time updates and progress tracking.",
             tech: ["React", "Firebase", "Redux"],
@@ -42,7 +44,7 @@ export default function ProjectsPage() {
         },
         {
             title: "E-Commerce Store",
-            image: "./images/projects/ecommerce5.jpeg",
+            image: "/images/projects/ecommerce5.jpeg",
             description:
                 "A full-stack modern e-commerce store with product filters, cart, Stripe payments, and admin dashboard.",
             tech: ["Next.js", "Stripe", "MongoDB", "Tailwind"],
@@ -51,7 +53,7 @@ export default function ProjectsPage() {
         },
         {
             title: "MovieFinder App",
-            image: "./images/projects/moviefinder6.jpeg",
+            image: "/images/projects/moviefinder6.jpeg",
             description:
                 "An elegant movie search and watchlist web app that fetches data from TMDb API and saves favorites locally.",
             tech: ["React", "TMDb API", "CSS Modules"],
@@ -60,7 +62,7 @@ export default function ProjectsPage() {
         },
         {
             title: "WeatherNow App",
-            image: "./images/projects/Weather7.jpeg",
+            image: "/images/projects/Weather7.jpeg",
             description:
                 "A weather forecasting web app that provides real-time weather updates, 5-day forecasts, and location-based UI.",
             tech: ["React", "OpenWeather API", "Tailwind"],
@@ -69,7 +71,7 @@ export default function ProjectsPage() {
         },
         {
             title: "AI Image Generator",
-            image: "./images/projects/aiimagegenerator8.jpeg",
+            image: "/images/projects/aiimagegenerator8.jpeg",
             description:
                 "A creative AI web app that generates stunning images using OpenAI DALL·E API, with prompt history and downloads.",
             tech: ["Next.js", "OpenAI API", "Cloudinary"],
@@ -80,6 +82,7 @@ export default function ProjectsPage() {
 
     return (
         <main className="max-w-7xl mx-auto px-4 py-24">
+            {/* Page Title */}
             <motion.h1
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -89,7 +92,8 @@ export default function ProjectsPage() {
                 My Projects
             </motion.h1>
 
-            <motion.p   
+            {/* Subtitle */}
+            <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -98,9 +102,7 @@ export default function ProjectsPage() {
                 Turning concepts into sleek, functional experiences — built with precision and passion.
             </motion.p>
 
-
-
-            {/* Project Cards with Staggered Fade-Up */}
+            {/* Project Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 {projects.map((project, idx) => (
                     <motion.div
@@ -111,24 +113,26 @@ export default function ProjectsPage() {
                         transition={{ duration: 0.8, delay: idx * 0.15 }}
                         className="bg-slate-900 dark:bg-slate-800 rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-700/40 transition-transform transform hover:-translate-y-2 hover:scale-[1.02]"
                     >
-                        <div className="h-48 w-full overflow-hidden">
-                            <motion.img
-                                src={project.image}
-                                alt={project.title}
-                                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                                whileHover={{ scale: 1.05 }}
-                                transition={{ duration: 0.4 }}
-                            />
+                        {/* Project Image */}
+                        <div className="h-48 w-full overflow-hidden relative">
+                            <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.4 }}>
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    width={600}
+                                    height={400}
+                                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                                    priority={idx === 0}
+                                />
+                            </motion.div>
                         </div>
 
+                        {/* Project Details */}
                         <div className="p-6 flex flex-col justify-between h-[280px]">
                             <div>
-                                <h2 className="text-2xl font-bold text-purple-400 mb-2">
-                                    {project.title}
-                                </h2>
-                                <p className="text-slate-300 text-sm mb-3 leading-relaxed">
-                                    {project.description}
-                                </p>
+                                <h2 className="text-2xl font-bold text-purple-400 mb-2">{project.title}</h2>
+                                <p className="text-slate-300 text-sm mb-3 leading-relaxed">{project.description}</p>
+
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.tech.map((t, i) => (
                                         <span
@@ -145,6 +149,7 @@ export default function ProjectsPage() {
                                 <a
                                     href={project.github}
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center gap-2 text-slate-400 hover:text-purple-400 transition-colors"
                                 >
                                     <FaGithub /> <span>GitHub</span>
@@ -152,6 +157,7 @@ export default function ProjectsPage() {
                                 <a
                                     href={project.live}
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     className="flex items-center gap-2 text-slate-400 hover:text-purple-400 transition-colors"
                                 >
                                     <FaExternalLinkAlt /> <span>Live Demo</span>

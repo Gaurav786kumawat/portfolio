@@ -1,5 +1,6 @@
 'use client';
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AboutPage() {
     const skills = [
@@ -50,12 +51,17 @@ export default function AboutPage() {
                     {/* Left - Image */}
                     <div className="relative">
                         <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-purple-600 via-pink-500 to-rose-500 blur-3xl opacity-30 animate-pulse"></div>
-                        <img
+
+                        <Image
                             src="/images/profile.png"
                             alt="Your Name"
+                            width={320}   // equivalent to w-80
+                            height={320}  // equivalent to h-80
                             className="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-purple-400 shadow-[0_0_60px_-15px_rgba(168,85,247,0.7)]"
+                            priority      // ensures it loads fast
                         />
                     </div>
+
 
                     {/* Right - Intro */}
                     <div className="flex-1 space-y-6">
