@@ -8,7 +8,7 @@ export default function ContactPage() {
                 <div className="absolute inset-0 -z-10 bg-gradient-to-br from-rose-50 via-white to-purple-50 dark:from-slate-900 dark:via-slate-950 dark:to-slate-900"></div>
 
                 <section className="text-center mb-16">
-                    <h1 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-rose-600 via-pink-500 to-purple-500 bg-clip-text text-transparent">
+                    <h1 className="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-rose-600 via-pink-500 to-purple-500 bg-clip-text text-transparent pb-2">
                         Let’s Build Something Amazing 🚀
                     </h1>
                     <p className="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
