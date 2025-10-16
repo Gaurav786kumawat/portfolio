@@ -7,7 +7,7 @@ import AnimatedLayout from "./components/AnimatedLayout";
 
 export const metadata = {
   title: 'Gaurav Kumawat | Portfolio',
-  description: 'Gaurav Kumawat — Frontend Developer. Projects, skills, experience, and contact.',
+  description: 'Gaurav Kumawat — Full Stack Developer. Projects, skills, experience, and contact.',
   metadataBase: new URL('https://portfolio.gauravkumawat.online'),
   icons: {
     icon: '/favicon.ico',
