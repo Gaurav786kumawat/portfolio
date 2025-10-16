@@ -7,14 +7,14 @@ import AnimatedLayout from "./components/AnimatedLayout";
 
 export const metadata = {
   title: 'Gaurav Kumawat | Portfolio',
-  description: 'Gaurav Kumawat — Full Stack Developer. Projects, skills, experience, and contact.',
+  description: 'Gaurav Kumawat — Full Stack Developer.',
   metadataBase: new URL('https://portfolio.gauravkumawat.online'),
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
     title: 'Gaurav Kumawat | Portfolio',
-    description: 'Full Stack Developer Projects and Skills',
+    description: 'Full Stack Developer',
     images : [
       {
         url: "https://portfolio.gauravkumawat.online/og-image.png",
