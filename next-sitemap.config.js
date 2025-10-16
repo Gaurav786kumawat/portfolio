@@ -1,4 +1,4 @@
 module.exports = {
-    siteUrl: 'https://gauravkumawat.online', // replace after domain active
+    siteUrl: 'https://portfolio.gauravkumawat.online', // replace after domain active
     generateRobotsTxt: true,
 };
