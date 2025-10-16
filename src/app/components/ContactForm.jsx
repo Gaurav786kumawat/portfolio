@@ -144,7 +144,7 @@ export default function ContactForm() {
                 <div className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 shadow-md">
                     <h2 className="text-2xl font-bold mb-4 text-rose-600">Get in Touch</h2>
                     <div className="space-y-4">
-                        <a href="mailto:gaurav@example.com" className="flex items-center gap-3 text-slate-700 dark:text-slate-200 hover:text-rose-600 transition">
+                        <a href="mailto:gaurav18kumawat@gmail.com" className="flex items-center gap-3 text-slate-700 dark:text-slate-200 hover:text-rose-600 transition">
                             <FaEnvelope className="text-rose-600 w-5 h-5" /> gaurav18kumawat@gmail.com
                         </a>
                         <a href="https://linkedin.com/in/gaurav-kumawat-b18039298" className="flex items-center gap-3 text-slate-700 dark:text-slate-200 hover:text-rose-600 transition">
