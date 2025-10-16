@@ -14,7 +14,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Gaurav Kumawat | Portfolio',
-    description: 'Frontend Developer Projects and Skills',
+    description: 'Full Stack Developer Projects and Skills',
     images : [
       {
         url: "https://portfolio.gauravkumawat.online/og-image.png",
