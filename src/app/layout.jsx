@@ -10,7 +10,7 @@ export const metadata = {
   description: 'Gaurav Kumawat — Frontend Developer. Projects, skills, experience, and contact.',
   metadataBase: new URL('https://gauravkumawat.online'), // <-- ADD THIS
   icons: {
-    icon: '/favicon.png',
+    icon: '/favicon.ico',
   },
   openGraph: {
     title: 'Gaurav Kumawat | Portfolio',
