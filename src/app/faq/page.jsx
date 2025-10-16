@@ -54,7 +54,7 @@ export default function FAQ() {
                 transition={{ duration: 0.8 }}
                 className="text-center mb-16"
             >
-                <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-rose-500 to-purple-500 mb-4">
+                <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-rose-500 to-purple-500 mb-4 pb-3">
                     FAQ (Frequently Asked Questions)
                 </h1>
                 <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
