@@ -8,14 +8,21 @@ import AnimatedLayout from "./components/AnimatedLayout";
 export const metadata = {
   title: 'Gaurav Kumawat | Portfolio',
   description: 'Gaurav Kumawat — Frontend Developer. Projects, skills, experience, and contact.',
-  metadataBase: new URL('https://gauravkumawat.online'), // <-- ADD THIS
+  metadataBase: new URL('https://portfolio.gauravkumawat.online'),
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
     title: 'Gaurav Kumawat | Portfolio',
     description: 'Frontend Developer Projects and Skills',
-    images: '/images/og-image.png',
+    images : [
+      {
+        url: "https://portfolio.gauravkumawat.online/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Gaurav Portfolio Preview",
+      },
+    ],
   },
 };
 
