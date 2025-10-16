@@ -46,7 +46,7 @@ export default function CookiePolicy() {
             <main className="max-w-5xl mx-auto px-6 pt-24">
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-rose-500 mb-4">
+                    <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-rose-500 mb-4 pb-3">
                         Cookie Policy
                     </h1>
                     <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
