@@ -34,16 +34,19 @@ export default function RootLayout({ children }) {
       <body className="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 flex flex-col min-h-screen">
         <Navbar />
         <AnimatedLayout>{children}</AnimatedLayout>
-        <!-- Google tag (gtag.js) -->
-          <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B9HKJXT1QL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-B9HKJXT1QL');
-</script>
+        {/* Google Analytics (GA4) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-B9HKJXT1QL"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-B9HKJXT1QL', { page_path: window.location.pathname });
+          `}
+        </Script>
         <Footer />
       </body>
     </html>
