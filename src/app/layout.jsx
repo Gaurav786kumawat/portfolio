@@ -35,13 +35,15 @@ export default function RootLayout({ children }) {
         <Navbar />
         <AnimatedLayout>{children}</AnimatedLayout>
         <!-- Google tag (gtag.js) -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-B9HKJXT1QL"></script>
-          <script id="google-analytics" strategy="afterInteractive">
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-B9HKJXT1QL', { page_path: window.location.pathname });
-          </script>
+          <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B9HKJXT1QL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B9HKJXT1QL');
+</script>
         <Footer />
       </body>
     </html>
