@@ -5,30 +5,50 @@ import Footer from "./components/Footer";
 import AnimatedLayout from "./components/AnimatedLayout";
 import Script from "next/script";
 
-
-
 export const metadata = {
-  title: 'Gaurav Kumawat | Portfolio',
-  description: 'Gaurav Kumawat — Full Stack Developer.',
-  metadataBase: new URL('https://portfolio.gauravkumawat.online'),
+  title: "Gaurav Kumawat — Full Stack Developer & Student",
+  description:
+    "Portfolio of Gaurav Kumawat — a full stack developer skilled in Next.js, React, Node.js, Express, and MongoDB. Explore projects, skills, and contact information.",
+  metadataBase: new URL("https://portfolio.gauravkumawat.online"),
+  keywords: [
+    "Gaurav Kumawat",
+    "Full Stack Developer",
+    "Web Developer",
+    "Next.js Developer",
+    "React Developer",
+    "Node.js Developer",
+    "MERN Stack Developer",
+    "Portfolio",
+    "Gaurav Kumawat Portfolio",
+  ],
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
   openGraph: {
-    title: 'Gaurav Kumawat | Portfolio',
-    description: 'Full Stack Developer',
-    images : [
+    title: "Gaurav Kumawat — Full Stack Developer Portfolio",
+    description:
+      "Explore Gaurav Kumawat’s full stack web development projects — built using Next.js, React, Node.js, Express, and MongoDB.",
+    url: "https://portfolio.gauravkumawat.online",
+    siteName: "Gaurav Kumawat Portfolio",
+    images: [
       {
         url: "https://portfolio.gauravkumawat.online/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Gaurav Portfolio Preview",
+        alt: "Gaurav Kumawat Full Stack Developer Portfolio Preview",
       },
     ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gaurav Kumawat — Full Stack Developer",
+    description:
+      "Full Stack Developer skilled in React, Next.js, Node.js, and modern web technologies.",
+    images: ["https://portfolio.gauravkumawat.online/og-image.png"],
   },
 };
-
-
 
 export default function RootLayout({ children }) {
   return (
@@ -36,6 +56,8 @@ export default function RootLayout({ children }) {
       <body className="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 flex flex-col min-h-screen">
         <Navbar />
         <AnimatedLayout>{children}</AnimatedLayout>
+
+        {/* ✅ Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-B9HKJXT1QL"
           strategy="afterInteractive"
@@ -48,6 +70,41 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-B9HKJXT1QL', { page_path: window.location.pathname });
           `}
         </Script>
+
+        {/* ✅ SEO Structured Data for Google Knowledge Graph */}
+        <Script id="schema-person" type="application/ld+json" strategy="afterInteractive">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Gaurav Kumawat",
+              "url": "https://portfolio.gauravkumawat.online",
+              "image": "https://portfolio.gauravkumawat.online/og-image.png",
+              "sameAs": [
+                "https://github.com/gauravkumawat",
+                "https://www.linkedin.com/in/gauravkumawat"
+              ],
+              "jobTitle": "Full Stack Developer",
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Self Employed"
+              },
+              "description": "Full Stack Developer skilled in React, Next.js, Node.js, Express, and MongoDB — building modern, scalable web apps.",
+              "knowsAbout": [
+                "Web Development",
+                "Full Stack Development",
+                "Next.js",
+                "React",
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "Frontend Design",
+                "Backend APIs"
+              ]
+            }
+          `}
+        </Script>
+
         <Footer />
       </body>
     </html>
