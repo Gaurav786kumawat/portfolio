@@ -34,7 +34,6 @@ export default function RootLayout({ children }) {
       <body className="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 flex flex-col min-h-screen">
         <Navbar />
         <AnimatedLayout>{children}</AnimatedLayout>
-        {/* Google Analytics (GA4) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-B9HKJXT1QL"
           strategy="afterInteractive"
