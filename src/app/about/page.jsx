@@ -69,7 +69,7 @@ export default function AboutPage() {
                             Hi, I’m Gaurav Kumawat
                         </h1>
                         <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mt-4">
-                            I’m a <span className="text-pink-500 font-semibold">Full-Stack Web Developer</span> and BCA student passionate about building modern, scalable web applications.
+                            I’m a <span className="text-pink-500 font-semibold">Full-Stack Web Developer</span> and passionate about building modern, scalable web applications.
                             I focus on clean architecture, smooth UX, and high-performance code.
                             Beyond web development, I have intermediate DSA expertise and have successfully solved over <span className="font-semibold text-purple-400">150+ algorithm & data structure problems</span> to strengthen my problem-solving skills.
                         </p>
