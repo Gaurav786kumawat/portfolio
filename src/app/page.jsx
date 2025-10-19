@@ -13,15 +13,15 @@ export default function Home() {
       desc: "A performance-first Next.js portfolio with Framer Motion animations and server-side optimizations.",
       image: "/images/projects/portfolio.jpeg",
       tech: ["Next.js", "Tailwind", "Framer Motion"],
-      github: "https://github.com/yourusername/portfolio",
-      live: "https://yourportfolio.vercel.app"
+      github: "https://github.com/Gaurav786kumawat/portfolio/",
+      live: "https://portfolio.gauravkumawat.online/"
     },
     {
       title: "AI Chatbot",
       desc: "AI-powered chat interface integrating OpenAI with conversational memory and prompt controls.",
       image: "/images/projects/devBlog2.jpeg",
       tech: ["React", "Node.js", "OpenAI"],
-      github: "https://github.com/yourusername/chatgpt-clone",
+      github: "https://github.com/Gaurav786kumawat/",
       live: "https://chatgpt-demo.vercel.app"
     },
     {
@@ -29,7 +29,7 @@ export default function Home() {
       desc: "Full-stack e-commerce admin dashboard with analytics, product management, and Stripe payments.",
       image: "/images/projects/ecommerce5.jpeg",
       tech: ["Next.js", "MongoDB", "Stripe"],
-      github: "https://github.com/yourusername/ecommerce-store",
+      github: "https://github.com/Gaurav786kumawat/",
       live: "https://store-demo.vercel.app"
     }
   ];
