@@ -147,7 +147,7 @@ export default function ContactForm() {
                         <a href="mailto:gaurav18kumawat@gmail.com" className="flex items-center gap-3 text-slate-700 dark:text-slate-200 hover:text-rose-600 transition">
                             <FaEnvelope className="text-rose-600 w-5 h-5" /> gaurav18kumawat@gmail.com
                         </a>
-                        <a href="https://linkedin.com/in/gaurav-kumawat-b18039298" className="flex items-center gap-3 text-slate-700 dark:text-slate-200 hover:text-rose-600 transition">
+                        <a href="https://linkedin.com/in/gauravkumawatkirodiwal" className="flex items-center gap-3 text-slate-700 dark:text-slate-200 hover:text-rose-600 transition">
                             <FaLinkedin className="text-rose-600 w-5 h-5" /> LinkedIn
                         </a>
                         <a href="https://github.com/Gaurav786kumawat" className="flex items-center gap-3 text-slate-700 dark:text-slate-200 hover:text-rose-600 transition">
