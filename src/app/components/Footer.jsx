@@ -33,7 +33,7 @@ export default function Footer() {
                             <FaGithub />
                         </motion.a>
                         <motion.a
-                            href="https://linkedin.com/in/gaurav-kumawat-b18039298"
+                            href="https://linkedin.com/in/gauravkumawatkirodiwal"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={iconHover}
