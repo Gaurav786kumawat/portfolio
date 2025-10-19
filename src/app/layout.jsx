@@ -16,16 +16,18 @@ export const metadata = {
     "Web Developer",
     "Next.js Developer",
     "React Developer",
-    "Node.js Developer",
-    "MERN Stack Developer",
+    "JavaScript Developer",
     "Portfolio",
     "Gaurav Kumawat Portfolio",
+    "Gaurav Kumawat GitHub",
+    "Gaurav Kumawat LinkedIn"
   ],
+  authors: [{ name: "Gaurav Kumawat" }],
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Gaurav Kumawat — Full Stack Developer Portfolio",
+    title: "Gaurav Kumawat — Full Stack Developer",
     description:
       "Explore Gaurav Kumawat’s full stack web development projects — built using Next.js, React, Node.js, Express, and MongoDB.",
     url: "https://portfolio.gauravkumawat.online",
@@ -82,12 +84,14 @@ export default function RootLayout({ children }) {
               "image": "https://portfolio.gauravkumawat.online/og-image.png",
               "sameAs": [
                 "https://github.com/gauravkumawat",
-                "https://www.linkedin.com/in/gauravkumawat"
+                "https://www.linkedin.com/in/gauravkumawat",
+                "https://portfolio.gauravkumawat.online",
+                "https://instagram.com/arnavsingh820",
               ],
               "jobTitle": "Full Stack Developer",
               "worksFor": {
                 "@type": "Organization",
-                "name": "Self Employed"
+                "name": "Self Employed / FreeLance / Personal Projects"
               },
               "description": "Full Stack Developer skilled in React, Next.js, Node.js, Express, and MongoDB — building modern, scalable web apps.",
               "knowsAbout": [
