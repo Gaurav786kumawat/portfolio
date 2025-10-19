@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
+# Host
+Host: https://portfolio.gauravkumawat.online
+
+# Sitemaps
 Sitemap: https://portfolio.gauravkumawat.online/sitemap.xml
