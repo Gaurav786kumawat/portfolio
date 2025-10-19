@@ -398,7 +398,7 @@ export default function Home() {
             <div className="mt-6 flex flex-wrap justify-center gap-4">
               <a href="mailto:gaurav18kumawat@gmail.com" className="px-6 py-3 rounded-lg bg-rose-600 text-white font-semibold hover:bg-rose-700 transition">Email Me</a>
               <Link href="/contact" className="px-6 py-3 rounded-lg border border-white/20 text-white hover:bg-white/5 transition">Contact Page</Link>
-              <a href="https://linkedin.com/in/gaurav-kumawat-b18039298" target="_blank" rel="noreferrer" className="px-4 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold">LinkedIn</a>
+              <a href="https://linkedin.com/in/gauravkumawatkirodiwal" target="_blank" rel="noreferrer" className="px-4 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold">LinkedIn</a>
             </div>
           </section>
 
