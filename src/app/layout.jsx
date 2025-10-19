@@ -86,7 +86,7 @@ export default function RootLayout({ children }) {
                 "https://github.com/gauravkumawat",
                 "https://www.linkedin.com/in/gauravkumawat",
                 "https://portfolio.gauravkumawat.online",
-                "https://instagram.com/arnavsingh820",
+                "https://instagram.com/arnavsingh820"
               ],
               "jobTitle": "Full Stack Developer",
               "worksFor": {
