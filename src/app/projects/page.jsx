@@ -12,8 +12,8 @@ export default function ProjectsPage() {
             description:
                 "A personal portfolio built with Next.js, Tailwind CSS, and Framer Motion — showcasing projects, skills, and interactive animations.",
             tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
-            github: "https://github.com/yourusername/portfolio",
-            live: "https://yourportfolio.vercel.app",
+            github: "https://github.com/Gaurav786kumawat/portfolio",
+            live: "https://portfolio.gauravkumawat.online",
         },
         {
             title: "DevBlog Platform",
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
             description:
                 "A Markdown-based developer blogging platform with authentication, CMS-like UI, and SEO-optimized pages.",
             tech: ["Next.js", "MongoDB", "NextAuth", "Tailwind"],
-            github: "https://github.com/yourusername/devblog",
+            github: "https://github.com/Gaurav786kumawat/",
             live: "https://devblog-demo.vercel.app",
         },
         {
@@ -30,7 +30,7 @@ export default function ProjectsPage() {
             description:
                 "An AI-powered chatbot web app that integrates OpenAI API with conversational memory and dynamic prompts.",
             tech: ["React", "Node.js", "OpenAI API", "Express"],
-            github: "https://github.com/yourusername/chatgpt-clone",
+            github: "https://github.com/Gaurav786kumawat/",
             live: "https://chatgpt-demo.vercel.app",
         },
         {
@@ -39,7 +39,7 @@ export default function ProjectsPage() {
             description:
                 "A sleek productivity app to manage tasks, projects, and goals with real-time updates and progress tracking.",
             tech: ["React", "Firebase", "Redux"],
-            github: "https://github.com/yourusername/taskify",
+            github: "https://github.com/Gaurav786kumawat/",
             live: "https://taskify-demo.netlify.app",
         },
         {
@@ -48,7 +48,7 @@ export default function ProjectsPage() {
             description:
                 "A full-stack modern e-commerce store with product filters, cart, Stripe payments, and admin dashboard.",
             tech: ["Next.js", "Stripe", "MongoDB", "Tailwind"],
-            github: "https://github.com/yourusername/ecommerce-store",
+            github: "https://github.com/Gaurav786kumawat/",
             live: "https://store-demo.vercel.app",
         },
         {
@@ -57,7 +57,7 @@ export default function ProjectsPage() {
             description:
                 "An elegant movie search and watchlist web app that fetches data from TMDb API and saves favorites locally.",
             tech: ["React", "TMDb API", "CSS Modules"],
-            github: "https://github.com/yourusername/moviefinder",
+            github: "https://github.com/Gaurav786kumawat/",
             live: "https://moviefinder-demo.vercel.app",
         },
         {
@@ -66,7 +66,7 @@ export default function ProjectsPage() {
             description:
                 "A weather forecasting web app that provides real-time weather updates, 5-day forecasts, and location-based UI.",
             tech: ["React", "OpenWeather API", "Tailwind"],
-            github: "https://github.com/yourusername/weather-app",
+            github: "https://github.com/Gaurav786kumawat/",
             live: "https://weathernow-demo.netlify.app",
         },
         {
@@ -75,7 +75,7 @@ export default function ProjectsPage() {
             description:
                 "A creative AI web app that generates stunning images using OpenAI DALL·E API, with prompt history and downloads.",
             tech: ["Next.js", "OpenAI API", "Cloudinary"],
-            github: "https://github.com/yourusername/ai-image-generator",
+            github: "https://github.com/Gaurav786kumawat/",
             live: "https://aiart-demo.vercel.app",
         },
     ];
