@@ -10,7 +10,7 @@ export default function Home() {
   const featuredProjects = [
     {
       title: "Web Agency – Business Websites & Tools",
-      image: "/images/projects/web-agency.jpeg",
+      image: "/images/projects/web-agency.png",
       description:
         "A complete web agency platform offering business website demos, pricing plans, tools hub and service workflows — built for fast delivery of local business websites and advanced full-stack projects.",
       tech: ["Next.js", "Tailwind CSS", "Server Components", "Vercel"],
