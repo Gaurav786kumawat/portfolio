@@ -7,6 +7,15 @@ import Image from "next/image";
 export default function ProjectsPage() {
     const projects = [
         {
+            title: "Web Agency – Business Websites & Tools",
+            image: "/images/projects/web-agency.jpeg",
+            description:
+                "A complete web agency platform offering business website demos, pricing plans, tools hub and service workflows — built for fast delivery of local business websites and advanced full-stack projects.",
+            tech: ["Next.js", "Tailwind CSS", "Server Components", "Vercel"],
+            github: "https://github.com/Gaurav786kumawat/web-agency",
+            live: "https://services.gauravkumawat.online",
+        },
+        {
             title: "Portfolio Website",
             image: "/images/projects/portfolio.jpeg",
             description:
