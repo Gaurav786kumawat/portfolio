@@ -145,7 +145,7 @@ export default function ContactForm() {
                     <h2 className="text-2xl font-bold mb-4 text-rose-600">Get in Touch</h2>
                     <div className="space-y-4">
                         <a href="mailto:gaurav18kumawat@gmail.com" className="flex items-center gap-3 text-slate-700 dark:text-slate-200 hover:text-rose-600 transition">
-                            <FaEnvelope className="text-rose-600 w-5 h-5" /> gaurav18kumawat@gmail.com
+                            <FaEnvelope className="text-rose-600 w-5 h-5" /> Email
                         </a>
                         <a href="https://linkedin.com/in/gauravkumawatkirodiwal" className="flex items-center gap-3 text-slate-700 dark:text-slate-200 hover:text-rose-600 transition">
                             <FaLinkedin className="text-rose-600 w-5 h-5" /> LinkedIn
