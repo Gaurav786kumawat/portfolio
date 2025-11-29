@@ -8,11 +8,13 @@ import { usePathname } from "next/navigation";
 export default function Navbar() {
     const [open, setOpen] = useState(false);
     const pathname = usePathname();
+    const serviceWebsiteLink = "https://services.gauravkumawat.online"
 
     const links = [
         { name: "Home", href: "/" },
         { name: "About", href: "/about" },
         { name: "Skills", href: "/skills" },
+        { name: "Services", href: serviceWebsiteLink , target:"_blank"},
         { name: "Projects", href: "/projects" },
         { name: "Contact", href: "/contact" },
     ];
