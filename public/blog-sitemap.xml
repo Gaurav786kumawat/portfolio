@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+<url>
+  <loc>https://portfolio.gauravkumawat.online/blog/how-to-build-nextjs-app</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  
+  <image:image>
+    <image:loc>https://portfolio.gauravkumawat.online/blog/images/nextjs-tutorial.png</image:loc>
+    <image:title>Next.js Tutorial for Beginners</image:title>
+  </image:image>
+  
+  <news:news>
+    <news:publication>
+      <news:name>Gaurav Kumawat Blog</news:name>
+      <news:language>en</news:language>
+    </news:publication>
+    <news:publication_date>2026-02-09T18:25:41.265Z</news:publication_date>
+    <news:title>How to Build a Next.js App from Scratch</news:title>
+  </news:news>
+</url>
+
+<url>
+  <loc>https://portfolio.gauravkumawat.online/blog/react-best-practices</loc>
+  <lastmod>2026-02-08T10:30:00.000Z</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+  
+  <image:image>
+    <image:loc>https://portfolio.gauravkumawat.online/blog/images/react-tips.png</image:loc>
+    <image:title>React Best Practices 2026</image:title>
+  </image:image>
+</url>
+
+</urlset>

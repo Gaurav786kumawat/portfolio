@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+<url>
+  <loc>https://portfolio.gauravkumawat.online</loc>
+  
+  <image:image>
+    <image:loc>https://portfolio.gauravkumawat.online/og-image.png</image:loc>
+    <image:title>Gaurav Kumawat - Full Stack Developer</image:title>
+    <image:caption>Professional portfolio website</image:caption>
+    <image:geo_location>India</image:geo_location>
+    <image:license>https://portfolio.gauravkumawat.online/license</image:license>
+  </image:image>
+  
+  <image:image>
+    <image:loc>https://portfolio.gauravkumawat.online/profile-photo.jpg</image:loc>
+    <image:title>Gaurav Kumawat Profile Picture</image:title>
+    <image:caption>Full Stack Developer from India</image:caption>
+  </image:image>
+  
+  <image:image>
+    <image:loc>https://portfolio.gauravkumawat.online/tech-stack-banner.png</image:loc>
+    <image:title>Technology Stack - Next.js, React, Node.js, MongoDB</image:title>
+  </image:image>
+</url>
+
+</urlset>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+  xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+
+<url>
+  <loc>https://portfolio.gauravkumawat.online/projects/ecommerce-website</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+  
+  <image:image>
+    <image:loc>https://portfolio.gauravkumawat.online/projects/ecommerce-screenshot-1.png</image:loc>
+    <image:title>E-commerce Homepage</image:title>
+    <image:caption>Modern e-commerce website built with Next.js</image:caption>
+  </image:image>
+  
+  <image:image>
+    <image:loc>https://portfolio.gauravkumawat.online/projects/ecommerce-screenshot-2.png</image:loc>
+    <image:title>Product Page Design</image:title>
+  </image:image>
+  
+  <video:video>
+    <video:thumbnail_loc>https://portfolio.gauravkumawat.online/projects/ecommerce-demo-thumb.jpg</video:thumbnail_loc>
+    <video:title>E-commerce Website Demo</video:title>
+    <video:description>Complete walkthrough of the e-commerce project</video:description>
+    <video:duration>180</video:duration>
+  </video:video>
+</url>
+
+<url>
+  <loc>https://portfolio.gauravkumawat.online/projects/social-media-dashboard</loc>
+  <lastmod>2026-02-05T14:20:00.000Z</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+  
+  <image:image>
+    <image:loc>https://portfolio.gauravkumawat.online/projects/dashboard-screenshot.png</image:loc>
+    <image:title>Social Media Dashboard</image:title>
+  </image:image>
+</url>
+
+</urlset>
