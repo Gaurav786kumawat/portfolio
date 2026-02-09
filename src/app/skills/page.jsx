@@ -8,6 +8,8 @@ import {
     FaLightbulb
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Head from "next/head";
+
 
 export default function SkillsPage() {
     const currentSkills = [

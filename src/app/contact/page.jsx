@@ -1,5 +1,7 @@
 import Navbar from "../components/Navbar";
 import ContactForm from "../components/ContactForm";
+import Head from "next/head";
+
 
 export default function ContactPage() {
     return (
