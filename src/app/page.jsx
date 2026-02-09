@@ -1,4 +1,3 @@
-'use client';
 import Link from "next/link";
 import PageWrapper from "./components/PageWrapper";
 import { motion } from "framer-motion";
