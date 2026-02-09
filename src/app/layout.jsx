@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AnimatedLayout from "./components/AnimatedLayout";
 import Script from "next/script";
-// import Analytics from "./components/Analytics";
+import Analytics from "./components/Analytics";
 
 /* ===========================
    METADATA (MAXIMUM SEO)
@@ -448,7 +448,7 @@ export default function RootLayout({ children }) {
       
       <body className="bg-white text-slate-800 dark:bg-slate-900 dark:text-slate-100 flex flex-col min-h-screen">
         
-        {/* <Analytics /> */}
+        <Analytics />
         <Navbar />
         <AnimatedLayout>{children}</AnimatedLayout>
 
@@ -718,6 +718,21 @@ export default function RootLayout({ children }) {
         </Script>
 
         <Footer />
+
+        {/* Google Analytics */}
+<Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-B9HKJXT1QL"
+  strategy="afterInteractive"
+/>
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-B9HKJXT1QL');
+  `}
+</Script>
+
       </body>
     </html>
   );
