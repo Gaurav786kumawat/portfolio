@@ -1,10 +1,241 @@
-'use client';
+"use-client";
 
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Head from "next/head";
 
+export const metadata = {
+    // Basic Meta Tags
+    title: "My Projects - Gaurav Kumawat | Full Stack Developer Portfolio & Web Applications",
+    description: "Explore my portfolio of 9+ full stack web development projects including Web Agency platforms, AI-powered applications, E-commerce stores, Task managers, Weather apps, and more. Built with Next.js, React, Node.js, MongoDB, TypeScript, and modern web technologies.",
+    
+    // Keywords - Maximum SEO
+    keywords: [
+        // General
+        "web development projects",
+        "full stack developer portfolio",
+        "portfolio projects 2024",
+        "Gaurav Kumawat projects",
+        "developer portfolio showcase",
+        "web application portfolio",
+        
+        // Technology Specific
+        "Next.js projects",
+        "React applications",
+        "Node.js projects",
+        "MERN stack projects",
+        "MongoDB projects",
+        "TypeScript projects",
+        "Tailwind CSS projects",
+        "Framer Motion animations",
+        
+        // Project Types
+        "web agency platform",
+        "business website builder",
+        "AI chatbot projects",
+        "ChatGPT clone",
+        "OpenAI API integration",
+        "e-commerce projects",
+        "Stripe payment integration",
+        "online store development",
+        "task manager app",
+        "productivity app development",
+        "movie search app",
+        "TMDb API integration",
+        "weather app projects",
+        "OpenWeather API",
+        "AI image generator",
+        "DALL-E integration",
+        "developer blog platform",
+        "Markdown blog",
+        "NextAuth authentication",
+        
+        // Features
+        "real-time applications",
+        "WebSocket projects",
+        "Firebase projects",
+        "REST API projects",
+        "responsive web design",
+        "modern web projects",
+        "full stack applications",
+        "server components",
+        "progressive web apps",
+        "SEO optimized projects",
+        
+        // Location & Service
+        "web developer Jaipur",
+        "freelance developer India",
+        "hire full stack developer",
+        "web development services",
+        "custom web applications",
+        
+        // Technologies Stack
+        "Redux state management",
+        "Zustand projects",
+        "Cloudinary integration",
+        "Vercel deployment",
+        "Netlify hosting",
+        "Git version control",
+        "modern JavaScript",
+        "ES6+ projects",
+        "CSS modules",
+        "responsive UI design",
+    ],
+    
+    authors: [{ 
+        name: "Gaurav Kumawat", 
+        url: "https://portfolio.gauravkumawat.online" 
+    }],
+    creator: "Gaurav Kumawat",
+    publisher: "Gaurav Kumawat",
+    applicationName: "Gaurav Kumawat Portfolio",
+    
+    // Robots & Indexing
+    robots: {
+        index: true,
+        follow: true,
+        nocache: false,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+    
+    // Open Graph - Facebook
+    openGraph: {
+        type: "website",
+        url: "https://portfolio.gauravkumawat.online/projects",
+        title: "My Projects - Gaurav Kumawat | Full Stack Developer Portfolio & Web Applications",
+        description: "Explore my portfolio of 9+ full stack web development projects including Web Agency platforms, AI-powered applications, E-commerce stores, and more. Built with Next.js, React, Node.js, MongoDB, and modern technologies.",
+        images: [
+            {
+                url: "https://portfolio.gauravkumawat.online/images/projects/portfolio.jpeg",
+                width: 1200,
+                height: 630,
+                alt: "Gaurav Kumawat Full Stack Developer Projects Portfolio",
+                type: "image/jpeg",
+            },
+            {
+                url: "https://portfolio.gauravkumawat.online/images/projects/web-agency.png",
+                width: 1200,
+                height: 630,
+                alt: "Web Agency Platform - Featured Project",
+                type: "image/png",
+            }
+        ],
+        siteName: "Gaurav Kumawat Portfolio",
+        locale: "en_US",
+        countryName: "India",
+    },
+    
+    // Twitter Card
+    twitter: {
+        card: "summary_large_image",
+        site: "@GauravKumawat",
+        creator: "@GauravKumawat",
+        title: "My Projects - Gaurav Kumawat | Full Stack Developer Portfolio",
+        description: "Explore 9+ full stack web development projects including Web Agency platforms, AI applications, E-commerce stores, and more. Built with Next.js, React, Node.js, MongoDB.",
+        images: {
+            url: "https://portfolio.gauravkumawat.online/images/projects/portfolio.jpeg",
+            alt: "Gaurav Kumawat Projects Portfolio",
+        },
+    },
+    
+    // Canonical & Alternates
+    alternates: {
+        canonical: "https://portfolio.gauravkumawat.online/projects",
+        languages: {
+            'en-US': 'https://portfolio.gauravkumawat.online/projects',
+            'hi-IN': 'https://portfolio.gauravkumawat.online/projects',
+            'x-default': 'https://portfolio.gauravkumawat.online/projects',
+        },
+    },
+    
+    // Category & Classification
+    category: "Technology",
+    classification: "Web Development Portfolio",
+    
+    // App & Mobile Meta
+    appleWebApp: {
+        capable: true,
+        title: "Projects - Gaurav Kumawat",
+        statusBarStyle: "black-translucent",
+    },
+    
+    // Verification
+    verification: {
+        google: "your-google-site-verification",
+        yandex: "your-yandex-verification",
+        other: {
+            "msvalidate.01": "your-bing-verification",
+        },
+    },
+    
+    // Additional Meta
+    other: {
+        // Theme & Design
+        "theme-color": "#a855f7",
+        "color-scheme": "dark light",
+        "msapplication-TileColor": "#a855f7",
+        
+        // Geographic
+        "geo.region": "IN-RJ",
+        "geo.placename": "Jaipur, Rajasthan",
+        "geo.position": "26.9124;75.7873",
+        "ICBM": "26.9124, 75.7873",
+        
+        // Language & Content
+        "language": "English",
+        "content-language": "en-US",
+        "coverage": "Worldwide",
+        "distribution": "Global",
+        "rating": "General",
+        "target": "all",
+        "audience": "Developers, Recruiters, Clients, Tech Enthusiasts",
+        
+        // Revisit & Update
+        "revisit-after": "7 days",
+        "expires": "never",
+        
+        // Mobile & Responsive
+        "HandheldFriendly": "True",
+        "MobileOptimized": "320",
+        "apple-mobile-web-app-capable": "yes",
+        "apple-mobile-web-app-status-bar-style": "black-translucent",
+        "apple-mobile-web-app-title": "Projects Portfolio",
+        "format-detection": "telephone=no",
+        "mobile-web-app-capable": "yes",
+        
+        // Social & Sharing
+        "pinterest": "nopin",
+        
+        // Page Type
+        "page-type": "portfolio",
+        "page-topic": "Web Development Projects",
+        
+        // Copyright
+        "copyright": "© 2024 Gaurav Kumawat. All rights reserved.",
+        "author": "Gaurav Kumawat",
+        "designer": "Gaurav Kumawat",
+        "owner": "Gaurav Kumawat",
+        "reply-to": "gaurav18kumawat@gmail.com",
+        
+        // Cache Control
+        "Cache-Control": "public, max-age=31536000",
+    },
+    
+    // Icons
+    icons: {
+        icon: "/favicon.ico",
+        apple: "/apple-touch-icon.png",
+    },
+    
+    // Manifest
+    manifest: "/manifest.json",
+};
 
 export default function ProjectsPage() {
     const projects = [
@@ -91,81 +322,231 @@ export default function ProjectsPage() {
         },
     ];
 
+
+  // Enhanced Collection Schema
+    const collectionSchema = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "Full Stack Development Projects Portfolio",
+        description: "A comprehensive portfolio showcasing 9+ web development projects built with modern technologies",
+        url: "https://portfolio.gauravkumawat.online/projects",
+        inLanguage: "en-US",
+        author: {
+            "@type": "Person",
+            name: "Gaurav Kumawat",
+            jobTitle: "Full Stack Developer",
+            url: "https://portfolio.gauravkumawat.online",
+            email: "gaurav18kumawat@gmail.com",
+            image: "https://portfolio.gauravkumawat.online/images/profile.png",
+        },
+        publisher: {
+            "@type": "Person",
+            name: "Gaurav Kumawat",
+        },
+        hasPart: projects.map(project => ({
+            "@type": "CreativeWork",
+            name: project.title,
+            description: project.description,
+            url: project.live,
+            image: `https://portfolio.gauravkumawat.online${project.image}`,
+            genre: project.category,
+            keywords: project.tech.join(", "),
+            author: {
+                "@type": "Person",
+                name: "Gaurav Kumawat"
+            },
+            datePublished: "2024",
+        }))
+    };
+
+    // Breadcrumb Schema
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://portfolio.gauravkumawat.online"
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: "Projects",
+                item: "https://portfolio.gauravkumawat.online/projects"
+            }
+        ]
+    };
+
+  // Enhanced ItemList Schema with SoftwareApplication
+    const itemListSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Web Development Projects Showcase",
+        description: "Collection of full stack web applications and projects",
+        numberOfItems: projects.length,
+        itemListElement: projects.map((project, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+                "@type": "SoftwareApplication",
+                name: project.title,
+                description: project.description,
+                url: project.live,
+                image: `https://portfolio.gauravkumawat.online${project.image}`,
+                applicationCategory: "WebApplication",
+                operatingSystem: "Any",
+                offers: {
+                    "@type": "Offer",
+                    price: "0",
+                    priceCurrency: "USD"
+                },
+                author: {
+                    "@type": "Person",
+                    name: "Gaurav Kumawat"
+                },
+                datePublished: "2024",
+                programmingLanguage: project.tech,
+            }
+        }))
+    };
+
+    // Person Schema with Portfolio
+    const personSchema = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Gaurav Kumawat",
+        jobTitle: "Full Stack Developer",
+        url: "https://portfolio.gauravkumawat.online",
+        image: "https://portfolio.gauravkumawat.online/images/profile.png",
+        email: "gaurav18kumawat@gmail.com",
+        address: {
+            "@type": "PostalAddress",
+            addressLocality: "Jaipur",
+            addressRegion: "Rajasthan",
+            addressCountry: "IN"
+        },
+        sameAs: [
+            "https://github.com/Gaurav786kumawat",
+            "https://linkedin.com/in/gauravkumawatkirodiwal",
+            "https://twitter.com/GauravKumawat"
+        ],
+        knowsAbout: projects.flatMap(p => p.tech),
+        hasCredential: projects.map(project => ({
+            "@type": "EducationalOccupationalCredential",
+            name: project.title,
+            url: project.live
+        }))
+    };
+
+    // Portfolio Schema
+    const portfolioSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Projects Portfolio - Gaurav Kumawat",
+        description: "Professional portfolio showcasing web development projects",
+        url: "https://portfolio.gauravkumawat.online/projects",
+        about: {
+            "@type": "Thing",
+            name: "Web Development Portfolio",
+            description: "Full Stack Development Projects"
+        },
+        mainEntity: {
+            "@type": "ItemList",
+            numberOfItems: projects.length,
+            itemListElement: projects.map((p, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                name: p.title
+            }))
+        },
+        specialty: [
+            "Full Stack Development",
+            "Web Application Development",
+            "AI Integration",
+            "E-Commerce Solutions",
+            "Real-time Applications"
+        ]
+    };
+
+    // FAQ Schema for Projects
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+            {
+                "@type": "Question",
+                name: "What types of projects has Gaurav Kumawat built?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "I have built a diverse portfolio including Web Agency platforms, AI-powered applications (ChatGPT clone, AI Image Generator), E-commerce stores with payment integration, Task management apps, Weather applications, Movie search apps, and Developer blogging platforms."
+                }
+            },
+            {
+                "@type": "Question",
+                name: "What technologies are used in these projects?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "My projects utilize modern technologies including Next.js, React, Node.js, Express, MongoDB, TypeScript, Tailwind CSS, Firebase, OpenAI API, Stripe, Framer Motion, Redux, and various other cutting-edge web development tools."
+                }
+            },
+            {
+                "@type": "Question",
+                name: "Are the projects open source?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, most projects have their source code available on GitHub. Each project includes both GitHub repository links and live demo links for you to explore."
+                }
+            },
+            {
+                "@type": "Question",
+                name: "Can you build similar projects for clients?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Absolutely! These projects demonstrate my capabilities in full stack development. I'm available for freelance work and can build custom solutions tailored to your specific requirements."
+                }
+            },
+            {
+                "@type": "Question",
+                name: "What makes these projects stand out?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Each project showcases modern design principles, responsive layouts, optimal performance, SEO optimization, and integration with cutting-edge technologies like AI APIs, real-time features, and payment systems."
+                }
+            }
+        ]
+    };
+
     return (
 
         <>
-              <Head>
-        {/* Primary Meta Tags */}
-        <title>My Projects - Gaurav Kumawat | Full Stack Developer Portfolio</title>
-        <meta name="title" content="My Projects - Gaurav Kumawat | Full Stack Developer Portfolio" />
-        <meta 
-          name="description" 
-          content="Explore my portfolio of web development projects including Web Agency platforms, AI applications, E-commerce stores, and more. Built with Next.js, React, Node.js, and modern technologies." 
-        />
-        <meta name="keywords" content="web development projects, full stack developer, Next.js projects, React applications, portfolio, Gaurav Kumawat, web agency, AI chatbot, e-commerce, task manager, movie app, weather app" />
-        <meta name="author" content="Gaurav Kumawat" />
-        <meta name="robots" content="index, follow" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://portfolio.gauravkumawat.online/projects" />
-        <meta property="og:title" content="My Projects - Gaurav Kumawat | Full Stack Developer Portfolio" />
-        <meta 
-          property="og:description" 
-          content="Explore my portfolio of web development projects including Web Agency platforms, AI applications, E-commerce stores, and more. Built with Next.js, React, Node.js, and modern technologies." 
-        />
-        <meta property="og:image" content="https://portfolio.gauravkumawat.online/images/projects/portfolio.jpeg" />
-        <meta property="og:site_name" content="Gaurav Kumawat Portfolio" />
-        <meta property="og:locale" content="en_US" />
-
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://portfolio.gauravkumawat.online/projects" />
-        <meta property="twitter:title" content="My Projects - Gaurav Kumawat | Full Stack Developer Portfolio" />
-        <meta 
-          property="twitter:description" 
-          content="Explore my portfolio of web development projects including Web Agency platforms, AI applications, E-commerce stores, and more. Built with Next.js, React, Node.js, and modern technologies." 
-        />
-        <meta property="twitter:image" content="https://portfolio.gauravkumawat.online/images/projects/portfolio.jpeg" />
-        <meta property="twitter:creator" content="@GauravKumawat" />
-
-        {/* Additional SEO Tags */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="canonical" href="https://portfolio.gauravkumawat.online/projects" />
-        
-        {/* Structured Data - JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "CollectionPage",
-              "name": "My Projects - Gaurav Kumawat",
-              "description": "Portfolio of web development projects by Gaurav Kumawat",
-              "url": "https://portfolio.gauravkumawat.online/projects",
-              "author": {
-                "@type": "Person",
-                "name": "Gaurav Kumawat",
-                "url": "https://portfolio.gauravkumawat.online"
-              },
-              "hasPart": projects.map(project => ({
-                "@type": "CreativeWork",
-                "name": project.title,
-                "description": project.description,
-                "url": project.live,
-                "author": {
-                  "@type": "Person",
-                  "name": "Gaurav Kumawat"
-                }
-              }))
-            })
-          }}
-        />
-      </Head>
-
+         {/* JSON-LD Structured Data - Multiple Schemas for Maximum SEO */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(portfolioSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
 
         <main className="max-w-7xl mx-auto px-4 py-24">
             {/* Page Title */}

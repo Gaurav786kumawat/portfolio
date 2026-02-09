@@ -8,8 +8,111 @@ import {
     FaLightbulb
 } from "react-icons/fa";
 import { motion } from "framer-motion";
-import Head from "next/head";
 
+
+// Metadata export for App Router
+export const metadata = {
+    title: "Skills & Expertise - Gaurav Kumawat | Full Stack Developer Tech Stack",
+    description: "Explore my technical skills and expertise in Full Stack Development. Proficient in Next.js, React, Node.js, Express, MongoDB, TypeScript, Tailwind CSS, and modern web technologies. Currently learning AI/ML integration and advanced DevOps.",
+    keywords: [
+        "full stack developer skills",
+        "Next.js expert",
+        "React developer",
+        "Node.js backend",
+        "MongoDB specialist",
+        "TypeScript developer",
+        "Tailwind CSS",
+        "MERN stack skills",
+        "web development expertise",
+        "Gaurav Kumawat skills",
+        "technical skills portfolio",
+        "frontend developer skills",
+        "backend developer skills",
+        "database management",
+        "REST API development",
+        "JavaScript ES6",
+        "Express.js",
+        "Prisma ORM",
+        "Redux Zustand",
+        "Framer Motion",
+        "Git GitHub",
+        "Vercel Netlify",
+        "Docker",
+        "AI ML integration",
+        "OpenAI API",
+        "LangChain",
+        "prompt engineering",
+        "web performance optimization",
+        "SEO skills",
+        "UI UX design",
+        "Figma",
+        "responsive design",
+        "accessibility a11y",
+    ],
+    authors: [{ name: "Gaurav Kumawat", url: "https://portfolio.gauravkumawat.online" }],
+    creator: "Gaurav Kumawat",
+    publisher: "Gaurav Kumawat",
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1,
+        },
+    },
+    
+    openGraph: {
+        type: "website",
+        url: "https://portfolio.gauravkumawat.online/skills",
+        title: "Skills & Expertise - Gaurav Kumawat | Full Stack Developer Tech Stack",
+        description: "Explore my technical skills in Full Stack Development including Next.js, React, Node.js, MongoDB, TypeScript, and modern web technologies.",
+        images: [
+            {
+                url: "https://portfolio.gauravkumawat.online/images/skills-og.png",
+                width: 1200,
+                height: 630,
+                alt: "Gaurav Kumawat Skills - Full Stack Developer",
+            }
+        ],
+        siteName: "Gaurav Kumawat Portfolio",
+        locale: "en_US",
+    },
+    
+    twitter: {
+        card: "summary_large_image",
+        site: "@GauravKumawat",
+        creator: "@GauravKumawat",
+        title: "Skills & Expertise - Gaurav Kumawat | Full Stack Developer Tech Stack",
+        description: "Explore my technical skills in Full Stack Development including Next.js, React, Node.js, MongoDB, TypeScript, and modern web technologies.",
+        images: ["https://portfolio.gauravkumawat.online/images/skills-og.png"],
+    },
+    
+    alternates: {
+        canonical: "https://portfolio.gauravkumawat.online/skills",
+        languages: {
+            'en-US': 'https://portfolio.gauravkumawat.online/skills',
+            'hi-IN': 'https://portfolio.gauravkumawat.online/skills',
+        },
+    },
+    
+    category: "Technology",
+    classification: "Web Development Skills",
+    
+    other: {
+        "theme-color": "#a855f7",
+        "color-scheme": "light dark",
+        "geo.region": "IN-RJ",
+        "geo.placename": "Jaipur",
+        "language": "English",
+        "coverage": "Worldwide",
+        "distribution": "Global",
+        "rating": "General",
+        "revisit-after": "7 days",
+    },
+};
 
 export default function SkillsPage() {
     const currentSkills = [
@@ -64,161 +167,206 @@ export default function SkillsPage() {
             ]
         }
     ];
+    // Person Schema with Skills
+    const personSchema = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Gaurav Kumawat",
+        jobTitle: "Full Stack Developer",
+        url: "https://portfolio.gauravkumawat.online",
+        image: "https://portfolio.gauravkumawat.online/images/profile.png",
+        email: "gaurav18kumawat@gmail.com",
+        address: {
+            "@type": "PostalAddress",
+            addressLocality: "Jaipur",
+            addressRegion: "Rajasthan",
+            addressCountry: "IN",
+        },
+        knowsAbout: [
+            ...currentSkills.flatMap(cat => cat.skills),
+            ...learningSkills.flatMap(cat => cat.skills)
+        ],
+        hasOccupation: {
+            "@type": "Occupation",
+            name: "Full Stack Web Developer",
+            skills: currentSkills.map(cat => ({
+                "@type": "DefinedTerm",
+                name: cat.title,
+                description: cat.skills.join(", ")
+            })),
+            occupationalCategory: "15-1254.00"
+        },
+        sameAs: [
+            "https://github.com/Gaurav786kumawat",
+            "https://linkedin.com/in/gauravkumawatkirodiwal",
+            "https://twitter.com/GauravKumawat",
+        ],
+    };
+
+    // ItemList Schema for Skills
+    const itemListSchema = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Technical Skills & Expertise",
+        description: "Comprehensive list of technical skills and expertise areas in Full Stack Development",
+        numberOfItems: currentSkills.length + learningSkills.length,
+        itemListElement: [
+            ...currentSkills.map((cat, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                item: {
+                    "@type": "Thing",
+                    name: cat.title,
+                    description: cat.skills.join(", ")
+                }
+            })),
+            ...learningSkills.map((cat, index) => ({
+                "@type": "ListItem",
+                position: currentSkills.length + index + 1,
+                item: {
+                    "@type": "Thing",
+                    name: cat.title,
+                    description: cat.skills.join(", ")
+                }
+            }))
+        ]
+    };
+
+    // Educational Credential Schema
+    const credentialSchema = {
+        "@context": "https://schema.org",
+        "@type": "EducationalOccupationalCredential",
+        credentialCategory: "Professional Skills Portfolio",
+        competencyRequired: currentSkills.flatMap(cat => cat.skills).join(", "),
+        educationalLevel: "Professional Level",
+        about: {
+            "@type": "Person",
+            name: "Gaurav Kumawat",
+            jobTitle: "Full Stack Developer",
+            url: "https://portfolio.gauravkumawat.online"
+        }
+    };
+
+    // Breadcrumb Schema
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://portfolio.gauravkumawat.online"
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: "Skills",
+                item: "https://portfolio.gauravkumawat.online/skills"
+            }
+        ]
+    };
+
+    // FAQ Schema for Skills
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+            {
+                "@type": "Question",
+                name: "What frontend technologies do you specialize in?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "I specialize in Next.js, React, Tailwind CSS, TypeScript, JavaScript (ES6+), Framer Motion, Redux, and Zustand for building modern, responsive web applications."
+                }
+            },
+            {
+                "@type": "Question",
+                name: "What backend technologies do you work with?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "I work with Node.js, Express.js, REST APIs, JWT Authentication, MVC Architecture, and Real-Time Applications using WebSockets."
+                }
+            },
+            {
+                "@type": "Question",
+                name: "Which databases are you proficient in?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "I'm proficient in MongoDB, MySQL, PostgreSQL, Prisma ORM, and Mongoose for database management and design."
+                }
+            },
+            {
+                "@type": "Question",
+                name: "What tools and DevOps technologies do you use?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "I use Git & GitHub for version control, Vercel and Netlify for deployment, Docker basics, Postman for API testing, VS Code, ESLint, and Prettier."
+                }
+            },
+            {
+                "@type": "Question",
+                name: "Are you learning any new technologies?",
+                acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Yes, I'm currently learning AI & Machine Learning technologies including OpenAI API, Python, Prompt Engineering, LangChain, and LLM Integration. I'm also exploring Figma for UI design, SEO optimization, and web accessibility."
+                }
+            },
+        ]
+    };
+
+    // WebPage Schema
+    const webPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Skills & Expertise - Gaurav Kumawat",
+        description: "Technical skills and expertise in Full Stack Development",
+        url: "https://portfolio.gauravkumawat.online/skills",
+        about: {
+            "@type": "Person",
+            name: "Gaurav Kumawat",
+            jobTitle: "Full Stack Developer"
+        },
+        specialty: [
+            "Full Stack Development",
+            "MERN Stack",
+            "Next.js Development",
+            "React Development",
+            "Node.js Development",
+            "Database Management"
+        ]
+    };
 
 
 
     return (
         <>
+                {/* JSON-LD Structured Data */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(credentialSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+            />
 
-  <Head>
-                {/* Primary Meta Tags */}
-                <title>Skills & Expertise - Gaurav Kumawat | Full Stack Developer Tech Stack</title>
-                <meta name="title" content="Skills & Expertise - Gaurav Kumawat | Full Stack Developer Tech Stack" />
-                <meta 
-                    name="description" 
-                    content="Explore my technical skills and expertise in Full Stack Development. Proficient in Next.js, React, Node.js, Express, MongoDB, TypeScript, Tailwind CSS, and modern web technologies. Currently learning AI/ML integration and advanced DevOps." 
-                />
-                <meta 
-                    name="keywords" 
-                    content={`full stack developer skills, ${allSkills}, web development skills, MERN stack, Gaurav Kumawat skills, technical expertise, frontend developer, backend developer, database management`}
-                />
-                <meta name="author" content="Gaurav Kumawat" />
-                <meta name="robots" content="index, follow" />
-                <meta name="language" content="English" />
-                <meta name="revisit-after" content="7 days" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-
-                {/* Open Graph / Facebook */}
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://portfolio.gauravkumawat.online/skills" />
-                <meta property="og:title" content="Skills & Expertise - Gaurav Kumawat | Full Stack Developer Tech Stack" />
-                <meta 
-                    property="og:description" 
-                    content="Explore my technical skills in Full Stack Development including Next.js, React, Node.js, MongoDB, TypeScript, and modern web technologies." 
-                />
-                <meta property="og:image" content="https://portfolio.gauravkumawat.online/images/skills-og.png" />
-                <meta property="og:site_name" content="Gaurav Kumawat Portfolio" />
-                <meta property="og:locale" content="en_US" />
-
-                {/* Twitter */}
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://portfolio.gauravkumawat.online/skills" />
-                <meta property="twitter:title" content="Skills & Expertise - Gaurav Kumawat | Full Stack Developer Tech Stack" />
-                <meta 
-                    property="twitter:description" 
-                    content="Explore my technical skills in Full Stack Development including Next.js, React, Node.js, MongoDB, TypeScript, and modern web technologies." 
-                />
-                <meta property="twitter:image" content="https://portfolio.gauravkumawat.online/images/skills-og.png" />
-                <meta property="twitter:creator" content="@GauravKumawat" />
-
-                {/* Additional SEO Tags */}
-                <link rel="canonical" href="https://portfolio.gauravkumawat.online/skills" />
-                <meta name="theme-color" content="#a855f7" />
-
-                {/* Structured Data - JSON-LD for Skills */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Person",
-                            name: "Gaurav Kumawat",
-                            jobTitle: "Full Stack Developer",
-                            url: "https://portfolio.gauravkumawat.online",
-                            knowsAbout: [
-                                ...currentSkills.flatMap(cat => cat.skills),
-                                ...learningSkills.flatMap(cat => cat.skills)
-                            ],
-                            hasOccupation: {
-                                "@type": "Occupation",
-                                name: "Full Stack Web Developer",
-                                skills: currentSkills.map(cat => ({
-                                    "@type": "DefinedTerm",
-                                    name: cat.title,
-                                    description: cat.skills.join(", ")
-                                }))
-                            }
-                        })
-                    }}
-                />
-
-                {/* Structured Data - JSON-LD for ItemList */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "ItemList",
-                            name: "Technical Skills",
-                            description: "List of technical skills and expertise areas",
-                            itemListElement: [
-                                ...currentSkills.map((cat, index) => ({
-                                    "@type": "ListItem",
-                                    position: index + 1,
-                                    item: {
-                                        "@type": "Thing",
-                                        name: cat.title,
-                                        description: cat.skills.join(", ")
-                                    }
-                                })),
-                                ...learningSkills.map((cat, index) => ({
-                                    "@type": "ListItem",
-                                    position: currentSkills.length + index + 1,
-                                    item: {
-                                        "@type": "Thing",
-                                        name: cat.title,
-                                        description: cat.skills.join(", ")
-                                    }
-                                }))
-                            ]
-                        })
-                    }}
-                />
-
-                {/* Structured Data - JSON-LD for EducationalOccupationalCredential */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "EducationalOccupationalCredential",
-                            credentialCategory: "Professional Skills",
-                            competencyRequired: currentSkills.flatMap(cat => cat.skills).join(", "),
-                            about: {
-                                "@type": "Person",
-                                name: "Gaurav Kumawat",
-                                jobTitle: "Full Stack Developer"
-                            }
-                        })
-                    }}
-                />
-
-                {/* Breadcrumb Structured Data */}
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "BreadcrumbList",
-                            itemListElement: [
-                                {
-                                    "@type": "ListItem",
-                                    position: 1,
-                                    name: "Home",
-                                    item: "https://portfolio.gauravkumawat.online"
-                                },
-                                {
-                                    "@type": "ListItem",
-                                    position: 2,
-                                    name: "Skills",
-                                    item: "https://portfolio.gauravkumawat.online/skills"
-                                }
-                            ]
-                        })
-                    }}
-                />
-            </Head>
 
             <main className="max-w-7xl mx-auto px-4 py-24">
                 {/* ---- Current Skills ---- */}
