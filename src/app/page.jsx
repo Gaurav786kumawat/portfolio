@@ -63,6 +63,122 @@ export default function Home() {
 
   return (
     <>
+    <Head>
+        {/* Primary Meta Tags */}
+        <title>Gaurav Kumawat - Full Stack Developer | MERN Stack & Next.js Expert</title>
+        <meta name="title" content="Gaurav Kumawat - Full Stack Developer | MERN Stack & Next.js Expert" />
+        <meta 
+          name="description" 
+          content="Full Stack Developer specializing in MERN Stack, Next.js, React, Node.js, and DSA. Building scalable web applications with modern technologies. 150+ DSA problems solved. Available for freelance and full-time opportunities." 
+        />
+        <meta name="keywords" content="full stack developer, MERN stack developer, Next.js developer, React developer, Node.js developer, web developer, JavaScript developer, TypeScript, MongoDB, Express.js, Gaurav Kumawat, DSA, frontend developer, backend developer, portfolio" />
+        <meta name="author" content="Gaurav Kumawat" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://portfolio.gauravkumawat.online/" />
+        <meta property="og:title" content="Gaurav Kumawat - Full Stack Developer | MERN Stack & Next.js Expert" />
+        <meta 
+          property="og:description" 
+          content="Full Stack Developer specializing in MERN Stack, Next.js, React, Node.js, and DSA. Building scalable web applications with modern technologies." 
+        />
+        <meta property="og:image" content="https://portfolio.gauravkumawat.online/images/profile.png" />
+        <meta property="og:site_name" content="Gaurav Kumawat Portfolio" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://portfolio.gauravkumawat.online/" />
+        <meta property="twitter:title" content="Gaurav Kumawat - Full Stack Developer | MERN Stack & Next.js Expert" />
+        <meta 
+          property="twitter:description" 
+          content="Full Stack Developer specializing in MERN Stack, Next.js, React, Node.js, and DSA. Building scalable web applications with modern technologies." 
+        />
+        <meta property="twitter:image" content="https://portfolio.gauravkumawat.online/images/profile.png" />
+        <meta property="twitter:creator" content="@GauravKumawat" />
+
+        {/* Additional SEO Tags */}
+        <link rel="canonical" href="https://portfolio.gauravkumawat.online/" />
+        <meta name="theme-color" content="#e11d48" />
+        
+        {/* Structured Data - JSON-LD for Person */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Gaurav Kumawat",
+              jobTitle: "Full Stack Developer",
+              url: "https://portfolio.gauravkumawat.online",
+              sameAs: [
+                "https://github.com/Gaurav786kumawat",
+                "https://linkedin.com/in/gauravkumawatkirodiwal"
+              ],
+              knowsAbout: [
+                "Full Stack Development",
+                "MERN Stack",
+                "Next.js",
+                "React",
+                "Node.js",
+                "MongoDB",
+                "JavaScript",
+                "TypeScript",
+                "Data Structures and Algorithms"
+              ],
+              description: "Full Stack Developer specializing in MERN Stack, Next.js, and modern web technologies"
+            })
+          }}
+        />
+
+        {/* Structured Data - JSON-LD for Website */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Gaurav Kumawat Portfolio",
+              url: "https://portfolio.gauravkumawat.online",
+              description: "Portfolio website of Gaurav Kumawat - Full Stack Developer",
+              author: {
+                "@type": "Person",
+                name: "Gaurav Kumawat"
+              }
+            })
+          }}
+        />
+
+        {/* Structured Data - JSON-LD for Projects */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              itemListElement: featuredProjects.map((project, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                item: {
+                  "@type": "CreativeWork",
+                  name: project.title,
+                  description: project.desc || project.description,
+                  url: project.live,
+                  author: {
+                    "@type": "Person",
+                    name: "Gaurav Kumawat"
+                  }
+                }
+              }))
+            })
+          }}
+        />
+      </Head>
       <PageWrapper>
         <main className="max-w-7xl mx-auto px-4 py-20 space-y-32">
 

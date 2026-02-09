@@ -90,6 +90,81 @@ export default function ProjectsPage() {
     ];
 
     return (
+
+        <>
+              <Head>
+        {/* Primary Meta Tags */}
+        <title>My Projects - Gaurav Kumawat | Full Stack Developer Portfolio</title>
+        <meta name="title" content="My Projects - Gaurav Kumawat | Full Stack Developer Portfolio" />
+        <meta 
+          name="description" 
+          content="Explore my portfolio of web development projects including Web Agency platforms, AI applications, E-commerce stores, and more. Built with Next.js, React, Node.js, and modern technologies." 
+        />
+        <meta name="keywords" content="web development projects, full stack developer, Next.js projects, React applications, portfolio, Gaurav Kumawat, web agency, AI chatbot, e-commerce, task manager, movie app, weather app" />
+        <meta name="author" content="Gaurav Kumawat" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+        <meta name="revisit-after" content="7 days" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://portfolio.gauravkumawat.online/projects" />
+        <meta property="og:title" content="My Projects - Gaurav Kumawat | Full Stack Developer Portfolio" />
+        <meta 
+          property="og:description" 
+          content="Explore my portfolio of web development projects including Web Agency platforms, AI applications, E-commerce stores, and more. Built with Next.js, React, Node.js, and modern technologies." 
+        />
+        <meta property="og:image" content="https://portfolio.gauravkumawat.online/images/projects/portfolio.jpeg" />
+        <meta property="og:site_name" content="Gaurav Kumawat Portfolio" />
+        <meta property="og:locale" content="en_US" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://portfolio.gauravkumawat.online/projects" />
+        <meta property="twitter:title" content="My Projects - Gaurav Kumawat | Full Stack Developer Portfolio" />
+        <meta 
+          property="twitter:description" 
+          content="Explore my portfolio of web development projects including Web Agency platforms, AI applications, E-commerce stores, and more. Built with Next.js, React, Node.js, and modern technologies." 
+        />
+        <meta property="twitter:image" content="https://portfolio.gauravkumawat.online/images/projects/portfolio.jpeg" />
+        <meta property="twitter:creator" content="@GauravKumawat" />
+
+        {/* Additional SEO Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="canonical" href="https://portfolio.gauravkumawat.online/projects" />
+        
+        {/* Structured Data - JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollectionPage",
+              "name": "My Projects - Gaurav Kumawat",
+              "description": "Portfolio of web development projects by Gaurav Kumawat",
+              "url": "https://portfolio.gauravkumawat.online/projects",
+              "author": {
+                "@type": "Person",
+                "name": "Gaurav Kumawat",
+                "url": "https://portfolio.gauravkumawat.online"
+              },
+              "hasPart": projects.map(project => ({
+                "@type": "CreativeWork",
+                "name": project.title,
+                "description": project.description,
+                "url": project.live,
+                "author": {
+                  "@type": "Person",
+                  "name": "Gaurav Kumawat"
+                }
+              }))
+            })
+          }}
+        />
+      </Head>
+
+
         <main className="max-w-7xl mx-auto px-4 py-24">
             {/* Page Title */}
             <motion.h1
@@ -177,5 +252,7 @@ export default function ProjectsPage() {
                 ))}
             </div>
         </main>
+
+        </>
     );
 }
