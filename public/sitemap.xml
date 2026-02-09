@@ -1,4 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<sitemap><loc>https://portfolio.gauravkumawat.online/sitemap-0.xml</loc></sitemap>
+<sitemapindex 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+    http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
+
+<!-- ============== MAIN SITEMAP (All Static Pages) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/sitemap-0.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>1.0</priority>
+</sitemap>
+
+<!-- ============== GENERAL SITEMAP ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>1.0</priority>
+</sitemap>
+
+<!-- ============== DYNAMIC SERVER SITEMAP (Blog Posts, Projects) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/server-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.9</priority>
+</sitemap>
+
+<!-- ============== PAGES SITEMAP (All Web Pages) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/pages-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.9</priority>
+</sitemap>
+
+<!-- ============== BLOG SITEMAP (All Blog Posts) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/blog-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.8</priority>
+</sitemap>
+
+<!-- ============== PROJECTS SITEMAP (All Project Pages) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/projects-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.9</priority>
+</sitemap>
+
+<!-- ============== CATEGORIES SITEMAP (Blog/Project Categories) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/categories-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.7</priority>
+</sitemap>
+
+<!-- ============== TAGS SITEMAP (All Tags) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/tags-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.6</priority>
+</sitemap>
+
+<!-- ============== IMAGES SITEMAP (All Images SEO) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/image-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.7</priority>
+</sitemap>
+
+<!-- ============== VIDEO SITEMAP (If you have videos) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/video-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.8</priority>
+</sitemap>
+
+<!-- ============== NEWS SITEMAP (Recent Blog Posts/Updates) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/news-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.8</priority>
+</sitemap>
+
+<!-- ============== MOBILE SITEMAP (Mobile Optimized Pages) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/mobile-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.9</priority>
+</sitemap>
+
+<!-- ============== SERVICES SITEMAP (If you offer services) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/services-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.8</priority>
+</sitemap>
+
+<!-- ============== TESTIMONIALS SITEMAP ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/testimonials-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.7</priority>
+</sitemap>
+
+<!-- ============== CASE STUDIES SITEMAP ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/case-studies-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.8</priority>
+</sitemap>
+
+<!-- ============== PORTFOLIO SITEMAP (Individual Portfolio Items) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/portfolio-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.9</priority>
+</sitemap>
+
+<!-- ============== ARCHIVE SITEMAP (Old Blog Posts by Date) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/archive-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.5</priority>
+</sitemap>
+
+<!-- ============== AUTHORS SITEMAP (If multi-author blog) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/authors-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.6</priority>
+</sitemap>
+
+<!-- ============== MULTILINGUAL SITEMAPS (If you add more languages) ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/en-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>1.0</priority>
+</sitemap>
+
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/hi-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.9</priority>
+</sitemap>
+
+<!-- ============== LEGAL PAGES SITEMAP ============== -->
+<sitemap>
+  <loc>https://portfolio.gauravkumawat.online/legal-sitemap.xml</loc>
+  <lastmod>2026-02-09T18:25:41.265Z</lastmod>
+  <priority>0.4</priority>
+</sitemap>
+
 </sitemapindex>

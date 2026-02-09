@@ -1,9 +1,335 @@
-# *
+# ============================================================
+# ROBOTS.TXT - GAURAV KUMAWAT PORTFOLIO
+# Last Updated: 2026-02-09
+# Website: https://portfolio.gauravkumawat.online
+# ============================================================
+
+# ============== UNIVERSAL CRAWLERS ==============
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /api/private/
+Disallow: /admin/
+Disallow: /_next/static/
+Disallow: /_next/image/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*utm_source=
+Disallow: /*?*session_id=
+Disallow: /404
+Disallow: /500
+Disallow: /error
+Crawl-delay: 0
+Request-rate: 1/1
 
-# Host
+# ============== GOOGLEBOT (Primary) ==============
+User-agent: Googlebot
+Allow: /
+Allow: /_next/static/
+Allow: /_next/image/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 0
+
+# ============== GOOGLEBOT IMAGE ==============
+User-agent: Googlebot-Image
+Allow: /
+Allow: /images/
+Allow: /projects/
+Allow: /blog/
+Allow: /_next/image/
+Disallow: /api/
+Disallow: /private/
+
+# ============== GOOGLEBOT VIDEO ==============
+User-agent: Googlebot-Video
+Allow: /
+Allow: /videos/
+Allow: /projects/
+Disallow: /api/
+
+# ============== GOOGLEBOT MOBILE ==============
+User-agent: Googlebot-Mobile
+Allow: /
+Crawl-delay: 0
+
+# ============== GOOGLEBOT NEWS ==============
+User-agent: Googlebot-News
+Allow: /
+Allow: /blog/
+Allow: /news/
+Disallow: /api/
+
+# ============== BINGBOT (Microsoft) ==============
+User-agent: Bingbot
+Allow: /
+Allow: /_next/static/
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Crawl-delay: 0
+
+# ============== BINGBOT MEDIA ==============
+User-agent: MSNBot-Media
+Allow: /
+Allow: /images/
+Allow: /videos/
+
+# ============== SLURP (Yahoo) ==============
+User-agent: Slurp
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 1
+
+# ============== DUCKDUCKBOT ==============
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 0
+
+# ============== BAIDUSPIDER (China) ==============
+User-agent: Baiduspider
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 1
+
+# ============== YANDEXBOT (Russia) ==============
+User-agent: YandexBot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 1
+
+# ============== YANDEX IMAGES ==============
+User-agent: YandexImages
+Allow: /
+Allow: /images/
+Allow: /projects/
+
+# ============== FACEBOT (Facebook) ==============
+User-agent: facebot
+User-agent: FacebookBot
+User-agent: Facebot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# ============== TWITTERBOT ==============
+User-agent: Twitterbot
+Allow: /
+Disallow: /api/
+
+# ============== LINKEDINBOT ==============
+User-agent: LinkedInBot
+Allow: /
+Disallow: /api/
+
+# ============== PINTEREST BOT ==============
+User-agent: Pinterestbot
+Allow: /
+Allow: /images/
+Disallow: /api/
+
+# ============== WHATSAPP BOT ==============
+User-agent: WhatsApp
+Allow: /
+Disallow: /api/
+
+# ============== TELEGRAM BOT ==============
+User-agent: TelegramBot
+Allow: /
+Disallow: /api/
+
+# ============== DISCORD BOT ==============
+User-agent: Discordbot
+Allow: /
+Disallow: /api/
+
+# ============== SLACKBOT ==============
+User-agent: Slackbot
+User-agent: Slackbot-LinkExpanding
+Allow: /
+Disallow: /api/
+
+# ============== REDDIT BOT ==============
+User-agent: redditbot
+Allow: /
+Disallow: /api/
+
+# ============== IA_ARCHIVER (Alexa/Archive.org) ==============
+User-agent: ia_archiver
+User-agent: ia_archiver-web.archive.org
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# ============== ARCHIVE.ORG ==============
+User-agent: archive.org_bot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# ============== SOGOU (China) ==============
+User-agent: Sogou
+Allow: /
+Disallow: /api/
+Crawl-delay: 2
+
+# ============== EXABOT (French) ==============
+User-agent: Exabot
+Allow: /
+Disallow: /api/
+Crawl-delay: 2
+
+# ============== APPLEBOT ==============
+User-agent: Applebot
+Allow: /
+Disallow: /api/
+
+# ============== PETALBOT (Huawei) ==============
+User-agent: PetalBot
+Allow: /
+Disallow: /api/
+Crawl-delay: 1
+
+# ============== SEMRUSHBOT (SEO Tool) ==============
+User-agent: SemrushBot
+Allow: /
+Disallow: /api/
+Crawl-delay: 2
+
+# ============== AHREFS BOT (SEO Tool) ==============
+User-agent: AhrefsBot
+Allow: /
+Disallow: /api/
+Crawl-delay: 2
+
+# ============== MAUIBOT (Majestic SEO) ==============
+User-agent: MauiBot
+Allow: /
+Disallow: /api/
+
+# ============== DOTBOT (Moz) ==============
+User-agent: dotbot
+Allow: /
+Disallow: /api/
+
+# ============== ROGERBOT (Moz) ==============
+User-agent: rogerbot
+Allow: /
+Disallow: /api/
+
+# ============== SCREAMING FROG ==============
+User-agent: Screaming Frog SEO Spider
+Allow: /
+Disallow: /api/
+
+# ============== CHROME LIGHTHOUSE ==============
+User-agent: Chrome-Lighthouse
+Allow: /
+
+# ============== BAD BOTS - BLOCK COMPLETELY ==============
+User-agent: MJ12bot
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: dotbot
+User-agent: rogerbot
+User-agent: BLEXBot
+User-agent: DataForSeoBot
+User-agent: serpstatbot
+User-agent: turnitinbot
+User-agent: spbot
+User-agent: MegaIndex.ru
+User-agent: JobboerseBot
+User-agent: SeekportBot
+Disallow: /
+
+# ============== SCRAPERS - BLOCK ==============
+User-agent: *bot
+User-agent: *spider
+User-agent: *crawler
+User-agent: HTTrack
+User-agent: WebReaper
+User-agent: WebCopier
+User-agent: Offline Explorer
+User-agent: Teleport
+User-agent: TeleportPro
+User-agent: WebStripper
+User-agent: larbin
+User-agent: emailcollector
+User-agent: emailsiphon
+User-agent: emailwolf
+User-agent: ExtractorPro
+User-agent: CopyRightCheck
+User-agent: crescent
+User-agent: wget
+User-agent: SiteSnagger
+User-agent: ProWebWalker
+User-agent: CheeseBot
+User-agent: Custo
+User-agent: DISCo
+User-agent: Download Demon
+Disallow: /
+
+# ============================================================
+# HOST DECLARATION
+# ============================================================
 Host: https://portfolio.gauravkumawat.online
 
-# Sitemaps
+# ============================================================
+# SITEMAP LOCATIONS
+# ============================================================
+
+# Main Sitemap Index
+Sitemap: https://portfolio.gauravkumawat.online/sitemap-index.xml
+
+# Individual Sitemaps
 Sitemap: https://portfolio.gauravkumawat.online/sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/sitemap-0.xml
+Sitemap: https://portfolio.gauravkumawat.online/server-sitemap.xml
+
+# Specialized Sitemaps
+Sitemap: https://portfolio.gauravkumawat.online/pages-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/blog-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/projects-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/image-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/video-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/news-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/categories-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/tags-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/services-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/testimonials-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/case-studies-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/portfolio-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/mobile-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/legal-sitemap.xml
+
+# Language Specific Sitemaps
+Sitemap: https://portfolio.gauravkumawat.online/en-sitemap.xml
+Sitemap: https://portfolio.gauravkumawat.online/hi-sitemap.xml
+
+# ============================================================
+# ADDITIONAL CRAWL DIRECTIVES
+# ============================================================
+
+# Clean URL parameters (Google Search Console)
+# Add these in Google Search Console if needed:
+# ?utm_source, ?utm_medium, ?utm_campaign, ?session_id, ?ref
+
+# ============================================================
+# NOTES FOR WEBMASTER
+# ============================================================
+# 1. Verify this file at: https://portfolio.gauravkumawat.online/robots.txt
+# 2. Test with Google's robots.txt Tester in Search Console
+# 3. Update sitemaps weekly or after major content changes
+# 4. Monitor crawl stats in Google Search Console
+# 5. Block bad bots if server load increases
+# 6. Review access logs regularly for suspicious crawlers
+# ============================================================
+
+# END OF ROBOTS.TXT
